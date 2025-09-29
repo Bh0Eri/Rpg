@@ -1,4 +1,4 @@
-public abstract class Character {
+public abstract class Character implements Status {
     final String name;
     int level;
     int maxHP;
@@ -21,8 +21,9 @@ public abstract class Character {
 
     void fullHeal() { currentHP = maxHP; }
 
-    String shortStatus() {
-        return String.format("%s (Lv.%d) HP:%d/%d ATK:%d DEF:%d",
-                name, level, currentHP, maxHP, attack, defense);
+    @Override
+    public String shortStatus() {
+        return String.format("%s HP:%d/%d ATK:%d DEF:%d",
+                name, currentHP, maxHP, attack, defense);
     }
 }

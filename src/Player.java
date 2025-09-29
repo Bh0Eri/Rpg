@@ -40,4 +40,9 @@ public class Player extends Character {
         currentHP = maxHP;
         System.out.printf(">>> %s leveled up to %d! (+HP, +ATK, +DEF)%n", name, level);
     }
+    @Override
+    public String shortStatus() {
+        return String.format("%s (Lv.%d, XP:%x) HP:%d/%d ATK:%d DEF:%d",
+                name, level, xp, currentHP, maxHP, attack, defense);
+    }
 }

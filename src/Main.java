@@ -68,7 +68,7 @@ public class Main {
         System.out.println("\n--- Characters ---");
         for (int i = 0; i < players.size(); i++) {
             Player p = players.get(i);
-            System.out.printf("%d) %s%s%n", i+1, p.shortStatus());
+            System.out.printf("%d) %s%n", i+1, p.shortStatus());
         }
     }
     // Choose a character
@@ -124,7 +124,8 @@ public class Main {
             System.out.printf("Victory! You gained %d XP.%n", xp);
             activePlayer.gainXP(xp);
         } else if (result.winner == Combat.Winner.MONSTER) {
-            System.out.println("Defeat... Come back stronger!");
+            System.out.println("Defeat... \n You died ");
+            players.remove(activePlayer);
         } else {
             System.out.println("Combat ended.");
         }
