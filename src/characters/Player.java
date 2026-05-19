@@ -1,11 +1,15 @@
+package characters;
+
+import enums.CharacterClass;
+
 import java.util.*;
 
 public class Player extends Character {
     final CharacterClass characterClass;
     int xp;
-    List<Skill> skills;
+    public List<Skill> skills;
 
-    private Player(String name, CharacterClass cClass, int level, int hp, int atk, int def) {
+    public Player(String name, CharacterClass cClass, int level, int hp, int atk, int def) {
         super(name, level, hp, atk, def);
         this.characterClass = cClass;
         this.xp = 0;
@@ -28,9 +32,9 @@ public class Player extends Character {
         }
     }
 
-    private int xpForNextLevel() { return 100 * level; }
+    public int xpForNextLevel() { return 100 * level; }
 
-    private void levelUp() {
+    public void levelUp() {
         level++;
         switch (characterClass) {
             case WARRIOR -> { maxHP += 15; attack += 4; defense += 3; }

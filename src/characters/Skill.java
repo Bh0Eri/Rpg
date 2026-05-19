@@ -1,10 +1,15 @@
+package characters;
+
+import enums.CharacterClass;
+import enums.DamageType;
+
 import java.util.*;
 
 public class Skill {
-    final String name;
-    final DamageType type;
-    final double multiplier;
-    final String description;
+    public final String name;
+    public final DamageType type;
+    public final double multiplier;
+    public final String description;
 
     public Skill(String name, DamageType type, double multiplier, String description) {
         this.name = name;

@@ -1,10 +1,12 @@
+package characters;
+
 public abstract class Character implements Status {
-    final String name;
-    int level;
+    public final String name;
+    public int level;
     int maxHP;
     int currentHP;
-    int attack;
-    int defense;
+    public int attack;
+    public int defense;
 
     Character(String name, int level, int hp, int attack, int defense) {
         this.name = name;
@@ -15,11 +17,11 @@ public abstract class Character implements Status {
         this.defense = defense;
     }
 
-    boolean isAlive() { return currentHP > 0; }
+    public boolean isAlive() { return currentHP > 0; }
 
-    void receiveDamage(int dmg) { currentHP = Math.max(0, currentHP - Math.max(0, dmg)); }
+    public void receiveDamage(int dmg) { currentHP = Math.max(0, currentHP - Math.max(0, dmg)); }
 
-    void fullHeal() { currentHP = maxHP; }
+    public void fullHeal() { currentHP = maxHP; }
 
     @Override
     public String shortStatus() {

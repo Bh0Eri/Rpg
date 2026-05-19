@@ -1,8 +1,12 @@
+package characters;
+
+import enums.Difficulty;
+
 import java.util.*;
 
 public class Monster extends Character {
-    final String name;
-    final Difficulty difficulty;
+    public final String name;
+    public final Difficulty difficulty;
 
     public Monster(String name, Difficulty diff, int hp, int atk, int def) {
         super(name,1,hp,atk,def);

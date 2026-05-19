@@ -1,3 +1,8 @@
+import characters.Monster;
+import characters.Player;
+import characters.Skill;
+import enums.Difficulty;
+
 import java.util.*;
 
 public class Combat {
@@ -10,8 +15,8 @@ public class Combat {
     public Result start(Player p, Monster m, Scanner sc) {
         while (p.isAlive() && m.isAlive()) {
             System.out.println("\n--- Turn ---");
-            System.out.println("Player: " + p.shortStatus());
-            System.out.println("Monster: " + m.shortStatus());
+            System.out.println("characters.Player: " + p.shortStatus());
+            System.out.println("characters.Monster: " + m.shortStatus());
 
             int skillIdx = chooseSkill(p, sc);
             Skill s = p.skills.get(skillIdx);

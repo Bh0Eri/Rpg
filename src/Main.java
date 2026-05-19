@@ -1,3 +1,7 @@
+import characters.Monster;
+import characters.Player;
+import enums.CharacterClass;
+
 import java.util.*;
 
 public class Main {
@@ -40,7 +44,7 @@ public class Main {
     }
 
     private static void createCharacter() {
-        System.out.print("Character name: ");
+        System.out.print("characters.Character name: ");
         String name = scanner.nextLine().trim();
 
         System.out.println("Class:");
@@ -54,11 +58,11 @@ public class Main {
         Player p = Player.createBasic(name, characterClass);
         players.add(p);
         activePlayer = p;
-        System.out.println("Character created and set as active:");
+        System.out.println("characters.Character created and set as active:");
         System.out.println(p.shortStatus());
     }
 
-    // Character list
+    // characters.Character list
 
     private static void listPlayers() {
         if (players.isEmpty()) {
